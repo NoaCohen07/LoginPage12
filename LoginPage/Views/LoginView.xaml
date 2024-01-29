@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LoginPage.Views.LoginView"
+             Title="LoginView">
+    <VerticalStackLayout>
+        
+        <Label
+                Text="Name:"
+                FontSize="18"
+                HorizontalOptions="Center" />
+        <Entry 
+                Placeholder="Enter name" Text="{Binding UserName}"
+              />
+        <Label
+                Text="Password:"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        <Entry 
+                Placeholder="Enter password" Text="{Binding PassWord}"
+              />
+
+        <Button
+              
+                Text="Login"
+                Command="{Binding LoginStatus}"
+                HorizontalOptions="Center" />
+        <Button
+               
+                Text="Cancel"
+                Command="{Binding Cancel}"
+                HorizontalOptions="Center" />
+        
+        <Label 
+        Text="{Binding Messages}" TextColor="{Binding MessagesColor}"
+        />
+    </VerticalStackLayout>
+</ContentPage>
